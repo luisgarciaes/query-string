@@ -8,7 +8,29 @@
     <link rel='stylesheet' href='/assets/style.css'>
 </head>
 <body>
-    <h1 style="color: red;">Person: <%= ID %> </h1>
-    <h2>Query string value:<%= Qstr %> </h2>
+    <h1 style="color: red;">Person Name: <%= ID %> </h1>
+    <h2>Mensaje:
+        <% switch (Message) {
+            case "Hola": %>
+            <% for (var i =1; i <= Times;  i++ ) { %>
+            <br/>  <%= Message %> 
+            <%#  will output the numbers 1-10 %>
+            <% } %>
+          <% break;
+            case "Bienvenido": %>
+            <% for (var i =1; i <= Times;  i++ ) { %>
+            <br/>  <%= Message %> 
+            <%#  will output the numbers 1-10 %>
+            <% } %>
+          <% break;
+            case "Adios": %>
+            <% for (var i =1; i <= Times;  i++ ) { %>
+            <br/>  <%= Message %> 
+            <%#  will output the numbers 1-10 %>
+            <% } %>
+          <% break;
+            default:
+            break; } %>
+    </h2>
 </body>
 </html>
