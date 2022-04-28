@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 );
 
 app.get('/person/:id', (req, res) => {
-    res.send(`<!DOCTYPE html><html lang='en'><link rel='stylesheet' href='assets/style.css'></html>`)
+    res.send('person',{ID: req.params.id, Qstr: req.query.qrst});
 });
 
 app.listen(PORT);
